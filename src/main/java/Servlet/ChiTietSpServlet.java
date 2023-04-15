@@ -45,6 +45,7 @@ public class ChiTietSpServlet extends HttpServlet {
             UUID id = UUID.fromString(request.getParameter("id"));
             ChiTietSP ctsp=  chiTietSPRepository.getByID(id);
             chiTietSPRepository.Delete(ctsp);
+            response.sendRedirect("/Chi-TietSp/hien-thi");
         }
         else if (uri.contains("add")){
             request.getRequestDispatcher("/View/ChiTietSP/add.jsp").forward(request,response);
@@ -55,21 +56,21 @@ public class ChiTietSpServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String uri = request.getRequestURI();
         if (uri.contains("add")){
-            Integer namSX = Integer.parseInt(request.getParameter("namSX"));
+            Integer namBH = Integer.parseInt(request.getParameter("namBH"));
             String moTa = request.getParameter("moTa");
             Integer soLuongTon = Integer.parseInt(request.getParameter("soLuongTon"));
             float giaNhap = Float.parseFloat(request.getParameter("giaNhap"));
             float giaBan = Float.parseFloat(request.getParameter("giaBan"));
-            chiTietSPRepository.Add(new ChiTietSP(namSX, moTa, soLuongTon, giaNhap, giaBan));
+            chiTietSPRepository.Add(new ChiTietSP(giaBan,giaNhap,moTa,namBH,soLuongTon));
             response.sendRedirect("/Chi-TietSp/hien-thi");
         }else if (uri.contains("update")){
             UUID id = UUID.fromString(request.getParameter("id"));
-            Integer namSX = Integer.parseInt(request.getParameter("namSX"));
+            Integer namBH = Integer.parseInt(request.getParameter("namBH"));
             String moTa = request.getParameter("moTa");
             Integer soLuongTon = Integer.parseInt(request.getParameter("soLuongTon"));
             float giaNhap = Float.parseFloat(request.getParameter("giaNhap"));
             float giaBan = Float.parseFloat(request.getParameter("giaBan"));
-            chiTietSPRepository.Update(new ChiTietSP(id,namSX, moTa, soLuongTon, giaNhap, giaBan));
+            chiTietSPRepository.Update(new ChiTietSP(id,namBH, moTa, soLuongTon, giaNhap, giaBan));
             response.sendRedirect("/Chi-TietSp/hien-thi");
         }
     }

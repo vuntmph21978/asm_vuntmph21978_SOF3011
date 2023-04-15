@@ -36,7 +36,7 @@
         </header>
     </div>
 
-<a type="button" class="btn btn-primary" href="/khach-hang/add">Add</a>
+<a type="button" class="btn btn-primary" href="/cua-hang/add">Add</a>
 <table class="table">
     <thead>
     <td>Id</td>

@@ -33,7 +33,7 @@
 <form action="update" method="post">
     <div>
         <label for="">ID</label>
-        <input type="text" placeholder="" name="id" value="${list.id}">
+        <input type="text" placeholder="" readonly name="id" value="${list.id}">
     </div>
     <div>
         <label for="">Mã</label>
@@ -44,39 +44,7 @@
         <input type="text" placeholder="" name="ten" value="${list.ten}">
     </div>
     <div>
-        <label for="">Tên đệm</label>
-        <input type="text" placeholder="" name="tenDem" value="${list.tenDem}">
-    </div>
-    <div>
-        <label for="">Họ</label>
-        <input type="text" placeholder="" name="ho" value="${list.ho}">
-    </div>
-    <div>
-        <label for="">Ngày sinh</label>
-        <input type="text" placeholder="" name="ngaySinh" value="${list.ngaySinh}">
-    </div>
-    <div>
-        <label for="">SDT</label>
-        <input type="text" placeholder="" name="sdt" value="${list.sdt}">
-    </div>
-    <div>
-        <label for="">Địa chỉ</label>
-        <input type="text" placeholder="" name="diaChi" value="${list.diaChi}">
-    </div>
-    <div>
-        <label for="">Thành phố</label>
-        <input type="text" placeholder="" name="thanhPho" value="${list.thanhPho}">
-    </div>
-    <div>
-        <label for="">Quốc gia</label>
-        <input type="text" placeholder="" name="quocGia" value="${list.quocGia}">
-    </div>
-    <div>
-        <label for="">Mật khẩu</label>
-        <input type="text" placeholder="" name="matKhau" value="${list.matKhau}">
-    </div>
-    <div>
-        <button type="submit">Update</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </div>
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>

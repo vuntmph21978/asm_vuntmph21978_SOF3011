@@ -45,11 +45,25 @@ public class DongSPServlet extends HttpServlet {
             DongSP dongSP = dongSPRepository.getById(id);
             dongSPRepository.delete(dongSP);
             response.sendRedirect("/dong-san-pham/hien-thi");
+        }else if (uri.contains("add")){
+            request.getRequestDispatcher("/View/DongSP/add.jsp").forward(request,response);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String uri = request.getRequestURI();
+        if (uri.contains("add")){
+            String ma = request.getParameter("ma");
+            String ten = request.getParameter("ten");
+            dongSPRepository.add(new DongSP(ma,ten));
+            response.sendRedirect("/dong-san-pham/hien-thi");
+        }else if (uri.contains("update")){
+            UUID id = UUID.fromString(request.getParameter("id"));
+            String ma = request.getParameter("ma");
+            String ten = request.getParameter("ten");
+            dongSPRepository.update(new DongSP(id,ma,ten));
+            response.sendRedirect("/dong-san-pham/hien-thi");
+        }
     }
 }

@@ -1,5 +1,6 @@
 package Servlet;
 
+import Model.MauSac;
 import Model.NSX;
 import Model.NhanVien;
 import Repository.NSXRepository;
@@ -46,11 +47,25 @@ public class NSXServlet extends HttpServlet {
             NSX nsx = nsxRepository.getById(id);
             nsxRepository.delete(nsx);
             response.sendRedirect("/NSX/hien-thi");
+        }else if (uri.contains("add")){
+            request.getRequestDispatcher("/View/NSX/add.jsp").forward(request,response);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String uri = request.getRequestURI();
+        if (uri.contains("add")){
+            String ma = request.getParameter("ma");
+            String ten = request.getParameter("ten");
+            nsxRepository.add(new NSX(ma,ten));
+            response.sendRedirect("/NSX/hien-thi");
+        }else if (uri.contains("update")){
+            UUID id = UUID.fromString(request.getParameter("id"));
+            String ma = request.getParameter("ma");
+            String ten = request.getParameter("ten");
+            nsxRepository.update(new NSX(id,ma,ten));
+            response.sendRedirect("/NSX/hien-thi");
+        }
     }
 }

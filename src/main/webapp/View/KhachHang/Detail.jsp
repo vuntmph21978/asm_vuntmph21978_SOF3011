@@ -77,7 +77,7 @@
         <label for="">Mật khẩu</label>
         <input class="form-control" type="text" placeholder="" name="matKhau" value="${list.matKhau}"readonly>
     </div>
-    <button><a href="/khach-hang/hien-thi">Quay lại</a></button>
+    <button><a href="/khach-hang/hien-thi" class="btn btn-primary">Quay lại</a></button>
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>
 

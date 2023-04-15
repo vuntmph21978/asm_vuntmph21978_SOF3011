@@ -38,17 +38,31 @@ public class MauSacServlet extends HttpServlet {
             UUID id = UUID.fromString(request.getParameter("id"));
             MauSac mauSac  = mauSacRepository.getById(id);
             mauSacRepository.delete(mauSac);
-            response.sendRedirect("/Cua-Hang/hien-thi");
+            response.sendRedirect("/MauSac/hien-thi");
         }else if(uri.contains("view-update")){
             UUID id = UUID.fromString(request.getParameter("id"));
             MauSac mauSac  = mauSacRepository.getById(id);
             request.setAttribute("list", mauSac);
             request.getRequestDispatcher("/View/MauSac/update.jsp").forward(request,response);
+        }else if(uri.contains("add")){
+            request.getRequestDispatcher("/View/MauSac/add.jsp").forward(request,response);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String uri = request.getRequestURI();
+        if (uri.contains("add")){
+            String ma = request.getParameter("ma");
+            String ten = request.getParameter("ten");
+            mauSacRepository.add(new MauSac(ma,ten));
+            response.sendRedirect("/MauSac/hien-thi");
+        }else if (uri.contains("update")){
+            UUID id = UUID.fromString(request.getParameter("id"));
+            String ma = request.getParameter("ma");
+            String ten = request.getParameter("ten");
+            mauSacRepository.update(new MauSac(id,ma,ten));
+            response.sendRedirect("/MauSac/hien-thi");
+        }
     }
 }

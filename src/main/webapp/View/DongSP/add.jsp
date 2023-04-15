@@ -36,6 +36,7 @@
     <input name="ma" placeholder="Mã" class="form-control" value="${list.ma}">
     <label>Tên</label>
     <input name="ten" placeholder="Tên" class="form-control" value="${list.ten}">
+    <button><a href="/dong-san-pham/hien-thi" class="btn btn-primary">Quay lại</a></button>
 
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>

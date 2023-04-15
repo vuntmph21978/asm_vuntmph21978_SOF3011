@@ -9,7 +9,8 @@ public class User implements Serializable {
     private static final long serialVersionUID = 1 ;
     @Id
     @Column(name = "id")
-    public Integer id =0;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Integer id ;
     @Column(name = "username")
     public String username;
     @Column(name = "password")

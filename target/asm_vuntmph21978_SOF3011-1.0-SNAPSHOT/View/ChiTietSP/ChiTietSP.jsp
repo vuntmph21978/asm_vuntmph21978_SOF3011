@@ -21,7 +21,7 @@
     <div class="container">
         <header class="d-flex justify-content-center py-3">
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="/home" class="nav-link" aria-current="page">Home</a></li>
                 <li class="nav-item"><a href="/chuc-vu/hien-thi" class="nav-link">Chức vụ</a></li>
                 <li class="nav-item"><a href="/Chi-TietSp/hien-thi" class="nav-link active">Chi tiết sản phẩm</a></li>
                 <li class="nav-item"><a href="/cua-hang/hien-thi" class="nav-link">Cửa hàng</a></li>
@@ -40,8 +40,8 @@
 <table class="table">
     <thead>
     <td>Id</td>
-    <td>Năm Sx</td>
     <td>Mô tả</td>
+    <td>Năm BH</td>
     <td>Số lượng tồn</td>
     <td>Giá Nhập</td>
     <td>Giá Bán</td>
@@ -51,8 +51,8 @@
     <c:forEach items="${list}" var="l">
         <tr>
             <td>${l.id}</td>
-            <td>${l.namSX}</td>
             <td>${l.moTa}</td>
+            <td>${l.namBH}</td>
             <td>${l.soLuongTon}</td>
             <td>${l.giaNhap}</td>
             <td>${l.giaBan}</td>

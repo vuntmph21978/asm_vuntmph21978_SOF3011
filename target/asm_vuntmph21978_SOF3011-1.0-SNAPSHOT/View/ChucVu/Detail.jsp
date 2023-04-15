@@ -43,6 +43,8 @@
         <input type="text" placeholder="Ten" name="ten" value="${list.ten}">
     </div>
     <button><a href="/chuc-vu/hien-thi">Quay lại</a></button>
+    <button><a href="/chuc-vu/hien-thi" class="btn btn-primary">Quay lại</a></button>
+
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>
 

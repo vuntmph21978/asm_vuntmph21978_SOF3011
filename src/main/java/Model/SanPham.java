@@ -8,7 +8,7 @@ import java.util.UUID;
 public class SanPham {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private UUID id;
 
@@ -24,6 +24,11 @@ public class SanPham {
 
     public SanPham(UUID id, String ma, String ten) {
         this.id = id;
+        this.ma = ma;
+        this.ten = ten;
+    }
+
+    public SanPham(String ma, String ten) {
         this.ma = ma;
         this.ten = ten;
     }

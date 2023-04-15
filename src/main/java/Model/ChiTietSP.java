@@ -1,16 +1,20 @@
 package Model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.UUID;
 
+@AllArgsConstructor
+@Data
 @Table(name = "ChiTietSP")
 @Entity
-
 public class ChiTietSP {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
-    private UUID id;
+    public UUID id;
 
 //    @ManyToOne
 //    @JoinColumn(name = "idNSX", nullable = false)
@@ -28,8 +32,8 @@ public class ChiTietSP {
 //    @JoinColumn(name = "idDongSP", nullable = false)
 //    private DongSP idDongSP;
 
-    @Column(name = "NamSX")
-    private Integer namSX;
+    @Column(name = "NamBH")
+    private Integer namBH;
 
     @Column(name = "MoTa")
     private String moTa;
@@ -38,26 +42,16 @@ public class ChiTietSP {
     private Integer soLuongTon;
 
     @Column(name = "GiaNhap")
-    private float giaNhap;
+    private Float giaNhap;
 
     @Column(name = "GiaBan")
-    private float giaBan;
+    private Float giaBan;
 
     public ChiTietSP() {
     }
 
-
-    public ChiTietSP(UUID id, Integer namSX, String moTa, Integer soLuongTon, float giaNhap, float giaBan) {
-        this.id = id;
-        this.namSX = namSX;
-        this.moTa = moTa;
-        this.soLuongTon = soLuongTon;
-        this.giaNhap = giaNhap;
-        this.giaBan = giaBan;
-    }
-
-    public ChiTietSP(Integer namSX, String moTa, Integer soLuongTon, float giaNhap, float giaBan) {
-        this.namSX = namSX;
+    public ChiTietSP(float giaBan, float giaNhap, String moTa, Integer namBH, Integer soLuongTon) {
+        this.namBH = namBH;
         this.moTa = moTa;
         this.soLuongTon = soLuongTon;
         this.giaNhap = giaNhap;
@@ -72,12 +66,12 @@ public class ChiTietSP {
         this.id = id;
     }
 
-    public Integer getNamSX() {
-        return namSX;
+    public Integer getNamBH() {
+        return namBH;
     }
 
-    public void setNamSX(Integer namSX) {
-        this.namSX = namSX;
+    public void setNamBH(Integer namBH) {
+        this.namBH = namBH;
     }
 
     public String getMoTa() {
@@ -96,31 +90,19 @@ public class ChiTietSP {
         this.soLuongTon = soLuongTon;
     }
 
-    public float getGiaNhap() {
+    public Float getGiaNhap() {
         return giaNhap;
     }
 
-    public void setGiaNhap(float giaNhap) {
+    public void setGiaNhap(Float giaNhap) {
         this.giaNhap = giaNhap;
     }
 
-    public float getGiaBan() {
+    public Float getGiaBan() {
         return giaBan;
     }
 
-    public void setGiaBan(float giaBan) {
+    public void setGiaBan(Float giaBan) {
         this.giaBan = giaBan;
-    }
-
-    @Override
-    public String toString() {
-        return "ChiTietSP{" +
-                "id=" + id +
-                ", namSX=" + namSX +
-                ", moTa='" + moTa + '\'' +
-                ", soLuongTon=" + soLuongTon +
-                ", giaNhap=" + giaNhap +
-                ", giaBan=" + giaBan +
-                '}';
     }
 }

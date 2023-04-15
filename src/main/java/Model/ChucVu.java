@@ -9,7 +9,7 @@ import java.util.UUID;
 public class ChucVu {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private UUID id;
 

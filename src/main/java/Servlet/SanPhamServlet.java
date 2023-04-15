@@ -46,11 +46,25 @@ public class SanPhamServlet extends HttpServlet {
             SanPham sanPham = sanPhamRepository.getById(id);
             sanPhamRepository.delete(sanPham);
             response.sendRedirect("/SanPham/hien-thi");
+        }else if (uri.contains("add")){
+            request.getRequestDispatcher("/View/SanPham/add.jsp").forward(request,response);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String uri = request.getRequestURI();
+        if (uri.contains("add")){
+            String ma = request.getParameter("ma");
+            String ten = request.getParameter("ten");
+            sanPhamRepository.add(new SanPham(ma,ten));
+            response.sendRedirect("/SanPham/hien-thi");
+        }else if (uri.contains("update")){
+            UUID id = UUID.fromString(request.getParameter("id"));
+            String ma = request.getParameter("ma");
+            String ten = request.getParameter("ten");
+            sanPhamRepository.update(new SanPham(id,ma,ten));
+            response.sendRedirect("/SanPham/hien-thi");
+        }
     }
 }

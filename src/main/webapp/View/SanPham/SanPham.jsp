@@ -35,7 +35,7 @@
             </ul>
         </header>
     </div>
-<a type="button" class="btn btn-primary" href="/khach-hang/add">Add</a>
+<a type="button" class="btn btn-primary" href="/SanPham/add">Add</a>
 <table class="table">
     <thead>
     <td>Id</td>
@@ -50,9 +50,9 @@
             <td>${l.ma}</td>
             <td>${l.ten}</td>
             <td>
-                <a type="button" class="btn btn-primary" href="/khach-hang/detail?id=${l.id}">Detail</a>
-                <a type="button" class="btn btn-danger" href="/khach-hang/delete?id=${l.id}">Delete</a>
-                <a type="button" class="btn btn-warning" href="/khach-hang/update?id=${l.id}">Update</a>
+                <a type="button" class="btn btn-primary" href="/SanPham/detail?id=${l.id}">Detail</a>
+                <a type="button" class="btn btn-danger" href="/SanPham/delete?id=${l.id}">Delete</a>
+                <a type="button" class="btn btn-warning" href="/SanPham/update?id=${l.id}">Update</a>
             </td>
         </tr>
     </c:forEach>

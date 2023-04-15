@@ -9,7 +9,7 @@ import java.util.UUID;
 @Entity
 public class CuaHang {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private UUID id;
 
@@ -34,6 +34,14 @@ public class CuaHang {
 
     public CuaHang(UUID id, String ma, String ten, String diaChi, String thanhPho, String quocGia) {
         this.id = id;
+        this.ma = ma;
+        this.ten = ten;
+        this.diaChi = diaChi;
+        this.thanhPho = thanhPho;
+        this.quocGia = quocGia;
+    }
+
+    public CuaHang(String ma, String ten, String diaChi, String thanhPho, String quocGia) {
         this.ma = ma;
         this.ten = ten;
         this.diaChi = diaChi;

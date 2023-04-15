@@ -16,7 +16,7 @@
 <div class="container">
     <header class="d-flex justify-content-center py-3">
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="/home" class="nav-link" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="/chuc-vu/hien-thi" class="nav-link ">Chức vụ</a></li>
             <li class="nav-item"><a href="/Chi-TietSp/hien-thi" class="nav-link ">Chi tiết sản phẩm</a></li>
             <li class="nav-item"><a href="/cua-hang/hien-thi" class="nav-link">Cửa hàng</a></li>
@@ -43,39 +43,8 @@
         <label for="">Tên</label>
         <input class="form-control" type="text" placeholder="" name="ten" value="${list.ten}" readonly>
     </div>
-    <div>
-        <label for="">Tên đệm</label>
-        <input class="form-control" type="text" placeholder="" name="tenDem" value="${list.tenDem}"readonly>
-    </div>
-    <div>
-        <label for="">Họ</label>
-        <input class="form-control" type="text" placeholder="" name="ho" value="${list.ho}"readonly>
-    </div>
-    <div>
-        <label for="">Ngày sinh</label>
-        <input class="form-control" type="date" placeholder="" name="ngaySinh" value="${ngaySinh}"readonly>
-    </div>
-    <div>
-        <label for="">SDT</label>
-        <input class="form-control" type="text" placeholder="" name="sdt" value="${list.sdt}"readonly>
-    </div>
-    <div>
-        <label for="">Địa chỉ</label>
-        <input class="form-control" type="text" placeholder="" name="diaChi" value="${list.diaChi}"readonly>
-    </div>
-    <div>
-        <label for="">Thành phố</label>
-        <input  class="form-control"type="text" placeholder="" name="thanhPho" value="${list.thanhPho}"readonly>
-    </div>
-    <div>
-        <label for="">Quốc gia</label>
-        <input  class="form-control"type="text" placeholder="" name="quocGia" value="${list.quocGia}"readonly>
-    </div>
-    <div>
-        <label for="">Mật khẩu</label>
-        <input class="form-control" type="text" placeholder="" name="matKhau" value="${list.matKhau}"readonly>
-    </div>
-    <button><a href="/khach-hang/hien-thi">Quay lại</a></button>
+
+    <button><a href="/NSX/hien-thi" class="btn btn-primary">Quay lại</a></button>
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>
 

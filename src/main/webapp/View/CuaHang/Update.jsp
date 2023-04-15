@@ -45,6 +45,8 @@
     <input name="quocGia" placeholder="Quốc Gia" type="text" class="form-control" value="${list.quocGia}">
     <br>
     <button class="btn btn-primary" type="submit">Update</button>
+    <button><a href="/cua-hang/hien-thi" class="btn btn-primary">Quay lại</a></button>
+
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>
 

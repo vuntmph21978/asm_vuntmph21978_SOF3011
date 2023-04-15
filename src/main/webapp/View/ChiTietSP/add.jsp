@@ -33,8 +33,8 @@
     </div>
     <form class="form-group" method="post" action="/Chi-TietSp/add">
 
-        <label>Năm SX</label>
-        <input name="namSX" placeholder="Năm Sx" class="form-control">
+        <label>Năm BH</label>
+        <input name="namBH" placeholder="Năm Sx" class="form-control">
 
         <label>Mô tả</label>
         <input name="moTa" placeholder="Mô tả" class="form-control">

@@ -40,8 +40,8 @@
 <table class="table">
     <thead>
     <td>Id</td>
-    <td>Năm Sx</td>
     <td>Mô tả</td>
+    <td>Năm BH</td>
     <td>Số lượng tồn</td>
     <td>Giá Nhập</td>
     <td>Giá Bán</td>
@@ -51,8 +51,8 @@
     <c:forEach items="${list}" var="l">
         <tr>
             <td>${l.id}</td>
-            <td>${l.namSX}</td>
             <td>${l.moTa}</td>
+            <td>${l.namBH}</td>
             <td>${l.soLuongTon}</td>
             <td>${l.giaNhap}</td>
             <td>${l.giaBan}</td>

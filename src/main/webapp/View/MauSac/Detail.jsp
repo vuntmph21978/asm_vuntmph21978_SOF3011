@@ -45,39 +45,7 @@
         <label for="">Tên</label>
         <input class="form-control" type="text" placeholder="" name="ten" value="${list.ten}" readonly>
     </div>
-    <div>
-        <label for="">Tên đệm</label>
-        <input class="form-control" type="text" placeholder="" name="tenDem" value="${list.tenDem}"readonly>
-    </div>
-    <div>
-        <label for="">Họ</label>
-        <input class="form-control" type="text" placeholder="" name="ho" value="${list.ho}"readonly>
-    </div>
-    <div>
-        <label for="">Ngày sinh</label>
-        <input class="form-control" type="date" placeholder="" name="ngaySinh" value="${ngaySinh}"readonly>
-    </div>
-    <div>
-        <label for="">SDT</label>
-        <input class="form-control" type="text" placeholder="" name="sdt" value="${list.sdt}"readonly>
-    </div>
-    <div>
-        <label for="">Địa chỉ</label>
-        <input class="form-control" type="text" placeholder="" name="diaChi" value="${list.diaChi}"readonly>
-    </div>
-    <div>
-        <label for="">Thành phố</label>
-        <input  class="form-control"type="text" placeholder="" name="thanhPho" value="${list.thanhPho}"readonly>
-    </div>
-    <div>
-        <label for="">Quốc gia</label>
-        <input  class="form-control"type="text" placeholder="" name="quocGia" value="${list.quocGia}"readonly>
-    </div>
-    <div>
-        <label for="">Mật khẩu</label>
-        <input class="form-control" type="text" placeholder="" name="matKhau" value="${list.matKhau}"readonly>
-    </div>
-    <button><a href="/khach-hang/hien-thi">Quay lại</a></button>
+    <button><a href="/khach-hang/hien-thi" class="btn btn-primary">Quay lại</a></button>
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>
 

@@ -35,7 +35,7 @@
             </ul>
         </header>
     </div>
-<a type="button" class="btn btn-primary" href="/khach-hang/add">Add</a>
+<a type="button" class="btn btn-primary" href="/MauSac/add">Add</a>
 <table class="table">
     <thead>
     <td>Id</td>

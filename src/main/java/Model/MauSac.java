@@ -10,7 +10,7 @@ import java.util.UUID;
 
 public class MauSac {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private UUID id;
 
@@ -25,6 +25,11 @@ public class MauSac {
 
     public MauSac(UUID id, String ma, String ten) {
         this.id = id;
+        this.ma = ma;
+        this.ten = ten;
+    }
+
+    public MauSac(String ma, String ten) {
         this.ma = ma;
         this.ten = ten;
     }

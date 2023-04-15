@@ -53,7 +53,7 @@
     </div>
     <div>
         <label for="">Ngày sinh</label>
-        <input class="form-control" type="text" placeholder="" name="ngaySinh" value="${list.ngaySinh}">
+        <input class="form-control" type="date" placeholder="" name="ngaySinh" value="${list.ngaySinh}">
     </div>
     <div>
         <label for="">Giới tính</label>
@@ -68,14 +68,6 @@
         <input class="form-control" type="text" placeholder="" name="diaChi" value="${list.diaChi}">
     </div>
     <div>
-        <label for="">Thành phố</label>
-        <input class="form-control" type="text" placeholder="" name="thanhPho" value="${list.thanhPho}">
-    </div>
-    <div>
-        <label for="">Quốc gia</label>
-        <input class="form-control" type="text" placeholder="" name="quocGia" value="${list.quocGia}">
-    </div>
-    <div>
         <label for="">Mật khẩu</label>
         <input class="form-control" type="text" placeholder="" name="matKhau" value="${list.matKhau}">
     </div>
@@ -84,7 +76,7 @@
         <input class="form-control" type="text" placeholder="" name="trangThai" value="${list.trangThai}">
     </div>
     <div>
-        <button type="submit">Update</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </div>
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>

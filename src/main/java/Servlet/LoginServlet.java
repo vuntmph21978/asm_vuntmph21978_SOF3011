@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
         if (isValid) {
             HttpSession session = request.getSession();
             session.setAttribute("username", username);
-            response.sendRedirect("/home");
+            request.getRequestDispatcher("/View/Home/home.jsp").forward(request,response);
         } else {
             response.sendRedirect("/login.jsp");
         }

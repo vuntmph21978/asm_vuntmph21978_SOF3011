@@ -43,6 +43,8 @@
     <input name="thanhPho" placeholder="Thành Phố" type="text" class="form-control" value="${list.thanhPho}">
     <label>Quốc Gia</label>
     <input name="quocGia" placeholder="Quốc Gia" type="text" class="form-control" value="${list.quocGia}">
+    <button><a href="/cua-hang/hien-thi" class="btn btn-primary">Quay lại</a></button>
+
 </form>
 
 <%@include file="../Bootstrap/footer.jsp"%>

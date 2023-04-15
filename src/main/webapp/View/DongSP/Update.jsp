@@ -34,11 +34,13 @@
 
 <form class="form-group" action="/dong-san-pham/update?id=${dongSp.id}" method="post">
     <label>Mã</label>
-    <input name="ma" placeholder="Mã" class="form-control" value="${dongSp.ma}">
+    <input name="ma" placeholder="Mã" class="form-control" class="form-control" value="${dongSp.ma}">
     <label>Tên</label>
-    <input name="ten" placeholder="Tên" class="form-control" value="${dongSp.ten}">
+    <input name="ten" placeholder="Tên"class="form-control" class="form-control" value="${dongSp.ten}">
     <br>
     <button class="btn btn-primary" type="submit">Update</button>
+    <button><a href="/dong-san-pham/hien-thi" class="btn btn-primary">Quay lại</a></button>
+
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>
 

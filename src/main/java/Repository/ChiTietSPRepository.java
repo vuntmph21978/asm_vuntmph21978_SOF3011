@@ -37,7 +37,7 @@ public class ChiTietSPRepository {
         Transaction transaction = null;
         try(Session session = HibernateUtil.getFACTORY().openSession()) {
             transaction = session.beginTransaction();
-            session.save(chiTietSP);
+            session.persist(chiTietSP);
             transaction.commit();
         }catch (Exception e){
             e.printStackTrace();
@@ -72,8 +72,7 @@ public class ChiTietSPRepository {
     }
 
     public static void main(String[] args) {
-        new ChiTietSPRepository().Add(new ChiTietSP(2003,"không",100,20000,40000));
-
+        new ChiTietSPRepository().getAll().forEach(x-> System.out.println(x));
     }
 
 }

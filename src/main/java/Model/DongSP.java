@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public class DongSP {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private UUID id;
 
@@ -25,6 +25,11 @@ public class DongSP {
 
     public DongSP(UUID id, String ma, String ten) {
         this.id = id;
+        this.ma = ma;
+        this.ten = ten;
+    }
+
+    public DongSP(String ma, String ten) {
         this.ma = ma;
         this.ten = ten;
     }

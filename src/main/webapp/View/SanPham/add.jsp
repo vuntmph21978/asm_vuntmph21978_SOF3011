@@ -32,46 +32,14 @@
 </div><form action="add" method="post">
     <div>
         <label for="">Mã</label>
-        <input type="text" placeholder="Ma" name="ma" value="${list.ma}">
+        <input type="text" placeholder="" name="ma" value="${list.ma}">
     </div>
     <div>
         <label for="">Tên</label>
-        <input type="text" placeholder="Ten" name="ten" value="${list.ten}">
+        <input type="text" placeholder="" name="ten" value="${list.ten}">
     </div>
     <div>
-        <label for="">Tên đệm</label>
-        <input type="text" placeholder="Ten dem" name="tenDem" value="${list.tenDem}">
-    </div>
-    <div>
-        <label for="">Họ</label>
-        <input type="text" placeholder="Ho" name="ho" value="${list.ho}">
-    </div>
-    <div>
-        <label for="">Ngày sinh</label>
-        <input type="text" placeholder="Ngay sinh" name="ngaySinh" value="${list.ngaySinh}">
-    </div>
-    <div>
-        <label for="">SDT</label>
-        <input type="text" placeholder="sdt" name="sdt" value="${list.sdt}">
-    </div>
-    <div>
-        <label for="">Địa chỉ</label>
-        <input type="text" placeholder="Dia chi" name="diaChi" value="${list.diaChi}">
-    </div>
-    <div>
-        <label for="">Thành phố</label>
-        <input type="text" placeholder="Thanh pho" name="thanhPho" value="${list.thanhPho}">
-    </div>
-    <div>
-        <label for="">Quốc gia</label>
-        <input type="text" placeholder="Quoc gia" name="quocGia" value="${list.quocGia}">
-    </div>
-    <div>
-        <label for="">Mật khẩu</label>
-        <input type="text" placeholder="Mat khau" name="matKhau" value="${list.matKhau}">
-    </div>
-    <div>
-        <button type="submit">Add</button>
+        <button type="submit" class="btn btn-primary">Add</button>
     </div>
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>

@@ -34,46 +34,47 @@
 <form action="add" method="post">
     <div>
         <label for="">Mã</label>
-        <input type="text" placeholder="Ma" name="ma" value="${list.ma}">
+        <input type="text" placeholder="Ma"class="form-control" name="ma" value="${list.ma}">
     </div>
     <div>
         <label for="">Tên</label>
-        <input type="text" placeholder="Ten" name="ten" value="${list.ten}">
+        <input type="text" placeholder="Ten"class="form-control" name="ten" value="${list.ten}">
     </div>
     <div>
         <label for="">Tên đệm</label>
-        <input type="text" placeholder="Ten dem" name="tenDem" value="${list.tenDem}">
+        <input type="text" placeholder="Ten dem"class="form-control" name="tenDem" value="${list.tenDem}">
     </div>
     <div>
         <label for="">Họ</label>
-        <input type="text" placeholder="Ho" name="ho" value="${list.ho}">
+        <input type="text" placeholder="Ho"class="form-control" name="ho" value="${list.ho}">
     </div>
     <div>
         <label for="">Ngày sinh</label>
-        <input type="text" placeholder="Ngay sinh" name="ngaySinh" value="${list.ngaySinh}">
+        <input type="text" placeholder="Ngay sinh"class="form-control" name="ngaySinh" value="${list.ngaySinh}">
     </div>
     <div>
         <label for="">SDT</label>
-        <input type="text" placeholder="sdt" name="sdt" value="${list.sdt}">
+        <input type="text" placeholder="sdt"class="form-control" name="sdt" value="${list.sdt}">
     </div>
     <div>
         <label for="">Địa chỉ</label>
-        <input type="text" placeholder="Dia chi" name="diaChi" value="${list.diaChi}">
+        <input type="text" placeholder="Dia chi"class="form-control" name="diaChi" value="${list.diaChi}">
     </div>
     <div>
         <label for="">Thành phố</label>
-        <input type="text" placeholder="Thanh pho" name="thanhPho" value="${list.thanhPho}">
+        <input type="text" placeholder="Thanh pho"class="form-control" name="thanhPho" value="${list.thanhPho}">
     </div>
     <div>
         <label for="">Quốc gia</label>
-        <input type="text" placeholder="Quoc gia" name="quocGia" value="${list.quocGia}">
+        <input type="text" placeholder="Quoc gia"class="form-control" name="quocGia" value="${list.quocGia}">
     </div>
     <div>
         <label for="">Mật khẩu</label>
-        <input type="text" placeholder="Mat khau" name="matKhau" value="${list.matKhau}">
+        <input type="text" placeholder="Mat khau"class="form-control" name="matKhau" value="${list.matKhau}">
     </div>
     <div>
-        <button type="submit">Add</button>
+        <button type="submit" class="btn btn-primary">Add</button>
+        <button><a href="/khach-hang/hien-thi" class="btn btn-primary">Quay lại</a></button>
     </div>
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>

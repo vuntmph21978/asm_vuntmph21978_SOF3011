@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public class NSX {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private UUID id;
 
@@ -25,6 +25,11 @@ public class NSX {
 
     public NSX(UUID id, String ma, String ten) {
         this.id = id;
+        this.ma = ma;
+        this.ten = ten;
+    }
+
+    public NSX(String ma, String ten) {
         this.ma = ma;
         this.ten = ten;
     }

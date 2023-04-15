@@ -42,6 +42,8 @@
     </div>
     <div>
         <button type="submit">Update</button>
+        <button><a href="/chuc-vu/hien-thi" class="btn btn-primary">Quay lại</a></button>
+
     </div>
 </form>
 <%@include file="../Bootstrap/footer.jsp"%>
