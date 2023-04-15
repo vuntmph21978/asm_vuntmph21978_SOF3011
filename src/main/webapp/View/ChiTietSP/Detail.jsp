@@ -62,7 +62,8 @@
     <br>
         <a class="btn btn-primary" href="/Chi-TietSp/hien-thi" type="button"> Quay lại</a>
 
-</form><%@include file="../Bootstrap/footer.jsp"%>
+</form>
+    <%@include file="../Bootstrap/footer.jsp" %>
 </div>
 </body>
 </html>

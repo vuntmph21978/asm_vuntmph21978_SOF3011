@@ -63,7 +63,8 @@
     <br>
     <button class="btn btn-primary" type="submit">Update</button>
 </div>
-</form><%@include file="../Bootstrap/footer.jsp"%>
+</form>
+<%@include file="../Bootstrap/footer.jsp" %>
 
 </body>
 </html>

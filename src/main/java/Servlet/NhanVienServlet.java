@@ -2,10 +2,11 @@ package Servlet;
 
 import Model.NhanVien;
 import Repository.NhanVienRepository;
-import com.oracle.wls.shaded.org.apache.bcel.generic.IUSHR;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -25,29 +26,29 @@ import java.util.UUID;
 
 })
 public class NhanVienServlet extends HttpServlet {
-    private NhanVienRepository nhanVienRepository = new NhanVienRepository();
+    private NhanVienRepository repo = new NhanVienRepository();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<NhanVien> listNv = new ArrayList<>();
         String uri = request.getRequestURI();
         if(uri.contains("hien-thi")){
-            listNv = nhanVienRepository.getAll();
+            listNv = repo.getAll();
             request.setAttribute("list", listNv);
             request.getRequestDispatcher("/View/NhanVien/NhanVien.jsp").forward(request,response);
         }else if(uri.contains("detail")){
             UUID id = UUID.fromString(request.getParameter("id"));
-            NhanVien nhanVien = nhanVienRepository.getById(id);
+            NhanVien nhanVien = repo.getById(id);
             request.setAttribute("list", nhanVien);
             request.getRequestDispatcher("/View/NhanVien/detail.jsp").forward(request,response);
         }else if(uri.contains("view-update")){
             UUID id = UUID.fromString(request.getParameter("id"));
-            NhanVien nhanVien = nhanVienRepository.getById(id);
+            NhanVien nhanVien = repo.getById(id);
             request.setAttribute("list", nhanVien);
             request.getRequestDispatcher("/View/NhanVien/update.jsp").forward(request,response);
         }else if(uri.contains("delete")){
             UUID id = UUID.fromString(request.getParameter("id"));
-            NhanVien nhanVien = nhanVienRepository.getById(id);
-            nhanVienRepository.delete(nhanVien);
+            NhanVien nhanVien = repo.getById(id);
+            repo.delete(nhanVien);
             response.sendRedirect("/NhanVien/hien-thi");
         }
     }
@@ -72,7 +73,7 @@ public class NhanVienServlet extends HttpServlet {
             String sdt = request.getParameter("sdt");
             String matKhau = request.getParameter("matKhau");
             String trangThai = request.getParameter("trangThai");
-            nhanVienRepository.add(new NhanVien(ma, ten, tenDem, ho, gioiTinh, ngaySinh, diaChi, sdt, matKhau, trangThai));
+            repo.add(new NhanVien(ma, ten, tenDem, ho, gioiTinh, ngaySinh, diaChi, sdt, matKhau, trangThai));
             response.sendRedirect("/nhan-vien/hien-thi");
         }else  if(uri.contains("update")){
             String ma = request.getParameter("ma");
@@ -90,7 +91,7 @@ public class NhanVienServlet extends HttpServlet {
             String sdt = request.getParameter("sdt");
             String matKhau = request.getParameter("matKhau");
             String trangThai = request.getParameter("trangThai");
-            nhanVienRepository.update(new NhanVien(ma, ten, tenDem, ho, gioiTinh, ngaySinh, diaChi, sdt, matKhau, trangThai));
+            repo.update(new NhanVien(ma, ten, tenDem, ho, gioiTinh, ngaySinh, diaChi, sdt, matKhau, trangThai));
             response.sendRedirect("/nhan-vien/hien-thi");
         }
     }
